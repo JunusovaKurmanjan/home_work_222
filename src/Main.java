@@ -1,3 +1,4 @@
+import java.util.Random;
 public class Main {
     public static void main(String[] args) {
         System.out.println(pink(20,-13));
@@ -6,6 +7,15 @@ public class Main {
         System.out.println(pink(56,31));
         System.out.println(pink(22,35));
 
+        System.out.println(pink(generateRandomAge(), 21));
+        System.out.println(pink(generateRandomAge(), -13));
+        System.out.println(pink(generateRandomAge(),32));
+
+    }
+    public static int generateRandomAge(){
+        Random random=new Random();
+        int randomAge=random.nextInt(100)+1;
+        return randomAge;
     }
 
     public static String pink(int age, int temperature) {
